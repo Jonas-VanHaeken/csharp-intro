@@ -14,7 +14,7 @@ namespace ClockExercise
             var clock = new Clock(timerService);
             var data = new List<int>();
 
-            clock.SecondPassed += data.Add;
+            clock.Seconds += data.Add;
 
             Assert.Equal( new List<int> { }, data );
             timerService.GenerateTicks(1);
@@ -29,7 +29,7 @@ namespace ClockExercise
             var clock = new Clock(timerService);
             var data = new List<int>();
 
-            clock.MinutePassed += data.Add;
+            clock.Minutes += data.Add;
 
             Assert.Equal( new List<int> { }, data );
             timerService.GenerateTicks(59);
@@ -48,7 +48,7 @@ namespace ClockExercise
             var clock = new Clock(timerService);
             var data = new List<int>();
 
-            clock.HourPassed += data.Add;
+            clock.Hours += data.Add;
 
             Assert.Equal( new List<int> { }, data );
             timerService.GenerateTicks(2 * 60 * 60 - 1);
@@ -63,7 +63,7 @@ namespace ClockExercise
             var clock = new Clock(timerService);
             var data = new List<int>();
 
-            clock.DayPassed += data.Add;
+            clock.Days += data.Add;
 
             Assert.Equal( new List<int> { }, data );
             timerService.GenerateTicks(60 * 60 * 24 - 1);
